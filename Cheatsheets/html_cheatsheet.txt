@@ -33,7 +33,7 @@ HTML(Hyper Text Markup Language): provides the structure of a
 
         -<ol>: ordered list, numbered elements
         -<ul>: unordered list, bullet point elements
-            -<li>: list element, each number/bullet of a list
+            +<li>: list element, each number/bullet of a list
             (nested in ol/ul tags)
 
     Comments: <!-- comment text -->
@@ -41,9 +41,37 @@ HTML(Hyper Text Markup Language): provides the structure of a
     HTML 5: is the latest version of html that comes with new 
         elements and also new features that aren't just additions to the core elements of HTML.
 
+    Reserved Characters: characters reserved by html like <,>. In order to use reserved characters you need to use entity codes(< == &lt;)
+
+    Semantic Markup: role does the html element have? 
+        -Semantic: relating to meaning
+        -The idea is to use meaning html elements to help users determine the role of the element from the type of element.
+        -This helps with screen readers and site crawlers
+        -Example elements:
+            +The elements below are all functionally the same as a div
+            but gives meaning to the markup through their standardized use.
+            +<main> specifies the main content of a document
+            +<nav> defines a set of navigation links. NOT all links of a document only major blocks of navigation links.
+            +<section> defines a section in a document.
+            +<article> independent, self-contained content. An article should make sense on its own and it should be possible to distribute it independently from the rest of the site.
+            +<aside> defines some content aside from the content it is placed in. The aside content should be indirectly related to the surrounding content.
+            +<header> represents a container for introductory content or a set of navigational links. You can have several <header> elements in one HTML document. However, <header> cannot be placed within a <footer>, <address> or another <header> element.
+            +<footer> defines a footer for a document or section.
+            +<time> defines a specific time (or datetime). The datetime attribute of this element is used translate the time into a machine-readable format.
+            +<figure>  tag specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
+
+VS Code:
+    -Emmet:
+        Cheatsheet: https://docs.emmet.io/cheat-sheet/ 
+        + > == create nested elements (section > h1 > div: create a section element with a h1 inside which has a div inside)
+        + + == create elements that are siblings(section > h1 + div: create a section with an h1 and div child)
+        + * == create multiple instances of an element( h1 * 5: creates 5 h1 elements)
+
 Resources:
     -Mozilla Developer Network(MDN): 
         web development documentation(element reference page)
     -Chrome Inspector: right click any page -> inspect. 
         (f12 or ctrl+shift+i in chrome)
     -https://html.spec.whatwg.org/: HTML documentation
+    -Entity Codes: https://entitycode.com/#math-content
+    -Emmet Cheatsheet: https://docs.emmet.io/cheat-sheet/
