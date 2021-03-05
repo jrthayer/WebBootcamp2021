@@ -1,0 +1,49 @@
+HTML(Hyper Text Markup Language): provides the structure of a 
+    webpage by marking up the parts of the page. 
+
+    HTML Tags: Define the base elements of a page, consist of an opening and closing "tag"(<h1> </h1>).
+
+    HTML Boilerplate: 
+    <!DOCTYPE html> (determines html version)
+    <html> (represents top level of page, root element)
+        <head> (meta data: linking pages)
+            <title></title> (Title of document, tab text)
+        </head>
+        <body> (contains all content of our page)
+
+        </body>
+    </html>
+
+    Elements:
+        Block: takes up a whole "block" of space.(h1-h6,)
+        Inline: fits alongside other elements.()
+        Attributes: parameters inside element tags.
+
+        -<a href="site">: anchor element, create link to another page
+
+        -<div>(block): division element, used to group elements.
+        -<span>(inline): generic element container.
+
+        -<p>: paragraph element, seperate lines of text of a block of text.
+
+        -<h1-6>: heading element, defines page headings. Not used 
+            for size but structure. 
+
+        -<img>: embed image into page. No closing tag. 
+
+        -<ol>: ordered list, numbered elements
+        -<ul>: unordered list, bullet point elements
+            -<li>: list element, each number/bullet of a list
+            (nested in ol/ul tags)
+
+    Comments: <!-- comment text -->
+
+    HTML 5: is the latest version of html that comes with new 
+        elements and also new features that aren't just additions to the core elements of HTML.
+
+Resources:
+    -Mozilla Developer Network(MDN): 
+        web development documentation(element reference page)
+    -Chrome Inspector: right click any page -> inspect. 
+        (f12 or ctrl+shift+i in chrome)
+    -https://html.spec.whatwg.org/: HTML documentation
