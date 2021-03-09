@@ -35,6 +35,21 @@ HTML(Hyper Text Markup Language): provides the structure of a
         -<ul>: unordered list, bullet point elements
             +<li>: list element, each number/bullet of a list
             (nested in ol/ul tags)
+        -<table>: 
+            +Were initially used to manipulate the layout of a website. Now used for 
+            data that would fit well in a table.
+            +Old website example: https://www.spacejam.com/
+            +components:
+                +<tr>: table row. cannot have nested rows.
+                    +<th>: table header
+                    +<td>: table data
+                +<thead>: is used to group header content in an HTML table.
+                +<tbody>: is used to group the body content in an HTML table.
+                +<tfoot>: is used to group footer content in an HTML table
+            +attributes:
+                +rowspan: specifies the number of rows a cell should span.
+                +colspan: defines the number of columns a cell should span.
+
 
     Comments: <!-- comment text -->
 

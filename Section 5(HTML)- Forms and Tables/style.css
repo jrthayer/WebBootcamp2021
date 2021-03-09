@@ -1,0 +1,52 @@
+table{
+    /* border: 2px black solid; */
+    border-spacing: 0 10px;
+    width: 500px;
+    border-collapse: separate;
+}
+
+tr{
+    padding: 5px;
+    margin: 5px;
+    text-align: left;
+}
+
+table div{
+    border: 2px solid black;
+}
+
+tr *{
+    padding: 15px;
+}
+
+th{
+    width: 20%;
+    border: 2px solid black;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+tr td:nth-of-type(1){
+    border-top: solid black 2px;
+    border-top-right-radius: 15px;
+}
+
+tr td{
+    display: block;
+    border-right: solid black 2px;
+}
+
+tr td:last-of-type{
+    border-bottom: solid black 2px;
+    border-bottom-right-radius: 15px;
+}
+
+html{
+    background: grey;
+}
+
+div p{
+    font-size: 20px;
+}
+
+
