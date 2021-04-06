@@ -7,6 +7,6 @@ h1{
     text-decoration: line-through solid rgba(243, 16, 16, .5);
 }
 
-p{
-    
+p::selection{
+    background-color: sienna;
 }

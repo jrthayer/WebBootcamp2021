@@ -6,13 +6,76 @@ CSS(Cascading Style Sheets): the adjectives of web development. Provides
                         property: value;
                     }
         +syntax: semicolons need to be after all proper decleration!
-
+        +casscade: styles are applied top down so styles applied or linked first 
+            will be overridden by styles further down if specificity is equivalent. 
+        +specificity: this is how browsers determine which selector should be applied
+            when multiple selectors affect an element.
+            +specificity calculation: 
+                !important>inline>id>class,attribute,psuedoClass>type,psuedoElement
+                +when specifcity is the same order matters. Last style defined is applied.    
+        +inderitance: SOME css styles will be inherited by children if it isn't 
+            defined by the child
+            +values are inderited from closest relative.
+            +keyword inherit is used to force a child to inherit values that 
+                aren't done by default
+            +
     Ways to include css:
         +inline: defined in html style attribute.(Very Few Use cases)
         +nested: defined in html tag element <style>
         +external: write styles in a .css file and include it with a <link> element
             in the head of the html document.(Standard Practice)
 
+    Selectors:
+        +types:
+            +*{}: universal selector. 
+                +selects all elments of a document.
+            +element{}: element selector. 
+                +style all instances of element selected. (h1, div, etc)
+            +#idName{}: id selector. 
+                +style unique element with idName value.
+                +need # before name to indicate this is an id.
+                +id should only be referencing one item on the pages
+            +.className{}: class selector. 
+                +apply style to all elements that have a class attribute
+                    equivalent to className.
+                +need . before className
+                +className can/should be set on multiple elements
+        +combinators:
+            +selector , selector{}: 
+                +apply styles to multiple selectors at once that are seperated
+                    by a , .
+            +selector selector{}: descendant selector.
+                +select all elements that are inside the first selector
+                    and match the second selector.
+                +example: div a{}: select all a elements inside a div element
+                +most commonly used with .class element{}
+            +selector + selector{}: adjacent selector
+                +select only elements that match the second selector that are 
+                    immediately after elements that match the first selector
+                +example: h1+p{}: select all p elements immediately after an h1 element
+            +selector > selector{}: direct child selector
+                + example div > p{}: select all p elements that are direct children
+                of div elements. 
+            +selector[attribute=value]{}: attribute selector.
+                +input[type="radio"]{}: selects all input elements with type = radio. 
+                +more types of this selector: https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors
+        +pseudo classes: added to selectors for special states
+            +selector:hover{}: element selected when cursor is over that element
+            +selector:active{}: active selected element
+                +examples: holding a click on it
+            +selector:checked{} element selected that is checked
+                +example: radio button that is clicked on
+            +selector:nth-of-type(){} select specific instance of elements being selected.
+                +example: h1:nth-of-type(2){} select second h1
+                +example: h1:nth-of-type(3n){} select every third h1
+        +pseudo elements: styles a specific part of an element
+            +suppose to have :: but : does work and is often used mistakenly
+            +selector::first-letter{} changes first character of each selected element.
+            +selector::first-line{} "" first line ""
+            +selector::selection{}change style when selector is being selected
+            +selector::before{} creates a pseudo element before the selected element
+            +selector::after{} "" after ""
+    
     Properties:
         +color props:
             +background: modifies element background, does more than color.
@@ -37,7 +100,6 @@ CSS(Cascading Style Sheets): the adjectives of web development. Provides
             +font-family: sets font of text. 
                 +can list several fonts in case the first font isn't available on the machine
                 +fonts can be linked to pages with a font file
-
     
     css Colors:
         +named: 140 colors have an english name associated with them.
@@ -46,8 +108,10 @@ CSS(Cascading Style Sheets): the adjectives of web development. Provides
             +value of each channel can range from 0-255
         +hexadecimal: still rgb but represents 0-255 using hex numbering
             +example #ff03ab(red=ff,blue=03,green=ab)
+            +most commonly used color indicator
             + single digit hexvalues are valid if each first number of each channel 
             is the same as their second. example(#fa4 == #ffaa44)
+
 
     Resources:
         +all css properties: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
