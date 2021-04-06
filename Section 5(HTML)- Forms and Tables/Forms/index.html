@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Forms Demo</h1>
+    <Form action="test.html" method="GET">
+        <p>
+            <label for="test">Put In a value</label>
+            <input id="test" name="t" placeholder="ghost text">
+        </p>
+        <p>
+            <label>
+                this is a color input
+                <input type="color">
+            </label>
+        </p>
+        
+        <button>Submit the form</button>
+    </Form>
+    <hr>
+    <form action="https://wwww.Reddit.com/search">
+        <h4>Hijacking Reddit</h1>
+        <input type="text" name="q">
+        <button>Hijack</button>
+    </form>
+    <br>
+    <form action="https://www.google.com/search">
+        <h4>Hijacking Google</h1>
+        <input type="text" name="q">
+        <button>Hijack</button>
+    </form>
+    <br>
+    <form action="https://www.youtube.com/results">
+        <h4>Hijacking YouTube</h1>
+        <input type="text" name="search_query">
+        <button>Hijack</button>
+    </form>
+    <hr>
+    <form action="/birds">
+        <label for="agree">I agree to the terms</label>
+        <input type="checkbox" name="agree_input" id="agree">
+        
+        <p>
+            <label for="radio1">one</label>
+            <input type="radio" name="hello" id="radio1" value="1">
+            <label for="radio2">two</label>
+            <input type="radio" name="hello" id="radio2" value="2">
+            <label for="radio3">three</label>
+            <input type="radio" name="hello" id="radio3" value="3">
+        </p>
+
+        <p>
+            <label for="food"></label>
+            <select name="food" id="food">
+                <option value="1">fish</option>
+                <option value="2">steak</option>
+                <option value="3">pasta</option>
+            </select>
+        </p>
+
+        <button>Submit</button>
+    </form>
+    <hr>
+    <form action="/soundboard">
+        <label for="volume">Volume Level:</label>
+        <input type="range" id="volume" value="60" min="0" max="100" step="10" name="volLevel">
+        <br>
+        <label for="area"></label>
+        <textarea name="tarea" id="area" cols="30" rows="10"></textarea>
+        <br>
+        <button>submit</button>
+    </form>
+    <hr>
+    <form>
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="username">
+        <br>
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="password">
+        <br>
+        <button>Register</button>
+    </form>
+
+</body>
+</html>

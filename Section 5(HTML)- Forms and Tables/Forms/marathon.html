@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/race">
+        <h1>Race Registration!</h1>
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" required>
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lname" required>
+        <hr>
+        <h4>Select a Race:</h3>
+        <input type="radio" name="race" value="Fun" id="race1" required>
+        <label for="race1">Fun Run 5k</label>
+        <br>
+        <input type="radio" name="race" value="Half" id="race2" required>
+        <label for="race2">Half Marathon</label>
+        <br>
+        <input type="radio" name="race" value="Full" id="race3" required>
+        <label for="race3">Full Marathon</label>
+        <br>
+        <br>
+        <label for="age">Select Age Group</label>
+        <select name="age" id="age">
+            <option value="under 18" selected>under 18</option>
+            <option value="18-30">18-30</option>
+            <option value="30-50">30-50</option>
+            <option value="50+">50+</option>
+        </select>
+        <hr>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <hr>
+        <button>Register!</button>
+    </form>
+</body>
+</html>

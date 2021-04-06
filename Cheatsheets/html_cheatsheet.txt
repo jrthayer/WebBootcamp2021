@@ -3,7 +3,8 @@ HTML(Hyper Text Markup Language): provides the structure of a
 
     HTML Tags: Define the base elements of a page, consist of an opening and closing "tag"(<h1> </h1>).
 
-    HTML Boilerplate: 
+    HTML Boilerplate:
+    (Visual Studio Shortcut == ! + tab) 
     <!DOCTYPE html> (determines html version)
     <html> (represents top level of page, root element)
         <head> (meta data: linking pages)
@@ -35,9 +36,10 @@ HTML(Hyper Text Markup Language): provides the structure of a
         -<ul>: unordered list, bullet point elements
             +<li>: list element, each number/bullet of a list
             (nested in ol/ul tags)
+        
         -<table>: 
             +Were initially used to manipulate the layout of a website. Now used for 
-            data that would fit well in a table.
+                data that would fit well in a table.
             +Old website example: https://www.spacejam.com/
             +components:
                 +<tr>: table row. cannot have nested rows.
@@ -49,6 +51,75 @@ HTML(Hyper Text Markup Language): provides the structure of a
             +attributes:
                 +rowspan: specifies the number of rows a cell should span.
                 +colspan: defines the number of columns a cell should span.
+        
+        -<form>:
+            +groups set of inputs and transfers contained info 
+            +represents a document section containing information for submition
+            +action attribute specifies where the data should be sent
+            +method attribute determines which http method should be used 
+            +Attributes of children elements:
+                +info passing format: name=value
+                +name: identifies which input the value comes from
+                +value: value of input being sent to server 
+            +html built in form validation:
+                +some input types have some built in like: email, url, telephone
+                +Attributes of children elements:
+                    +Required(word only): makes the user input value before submitting the form. 
+                        +can be applied to elements inside form
+                        +may not be supported by all browsers
+                        +error values are styled by the browser
+                    +Pattern: input must match regular expersion inside this attribute 
+        -<input>:
+            +has no closing tag
+            +attributes
+                +type: changes what kind of input
+                    +list of available inputs: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
+                +placeholder: default text value in text based input types
+                +name: The name attribute is used to 
+                    reference elements in a JavaScript, or to reference form data after a form is submitted.
+                    Note: Only form elements with a name attribute will have their values passed 
+                    when submitting a form.
+            +types:
+                +checkbox: when submited and checked name=on will be sent
+                    +Attributes
+                        +checked(just the word): will set checkbox to checked by default
+                +radio: set of inputs, only one can be selected. 
+                    +connected with name attribute.
+                    +when submited name = on if one radio input is clicked.
+                        +when radio input has a value attribute defined name = value
+                            will be sent to next page. 
+                +range: specify a numeric value which must be no less than a given value, 
+                    and no more than another given value.
+                    +Attributes
+                        +min: minimum value
+                        +max: max value
+                        +step: adjusts range value by this amount each notch 
+                        +value: sets initial value
+
+        -<select>:
+            +drop down element containing option elements
+        -<option>:
+            +Attributes
+                +value: value sent to server on form submition
+                +selected: sets select default value to the option with this attribute
+
+        -<label>:
+            +connects text with an input element
+            +connected by:
+                +setting label for attribute to id of input(standard practice)
+                OR
+                +nesting input inside of the label
+            +Uses:
+                +screen readers need it to connect the label with the input element 
+                +label can be clicked as if it is the input. Users who have difficulty 
+                    clicking on very small regions (such as checkboxes) - because 
+                    when a user clicks the text within the <label> element, it 
+                    toggles the input (this increases the hit area).
+        -<button>:
+            +default behaviour: submits a form if is nested inside a form.
+            +attributes
+                +type: default is submit.
+
 
 
     Comments: <!-- comment text -->
@@ -64,7 +135,7 @@ HTML(Hyper Text Markup Language): provides the structure of a
         -This helps with screen readers and site crawlers
         -Example elements:
             +The elements below are all functionally the same as a div
-            but gives meaning to the markup through their standardized use.
+                but gives meaning to the markup through their standardized use.
             +<main> specifies the main content of a document
             +<nav> defines a set of navigation links. NOT all links of a document only major blocks of navigation links.
             +<section> defines a section in a document.
@@ -76,6 +147,7 @@ HTML(Hyper Text Markup Language): provides the structure of a
             +<figure>  tag specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
 
 VS Code:
+    Boilerplate Shortcut == ! + tab 
     -Emmet:
         Cheatsheet: https://docs.emmet.io/cheat-sheet/ 
         + > == create nested elements (section > h1 > div: create a section element with a h1 inside which has a div inside)
