@@ -1,0 +1,20 @@
+h1{
+    background-color: #fce;
+    color: rgb(15, 15, 87);
+}
+
+button{
+    width: 100px;
+    font-size: 20px;
+
+    color: cadetblue;
+    background: darkgreen;
+}
+
+button:hover{
+    background: lightgreen;
+}
+
+p{
+    color: burlywood;
+}

@@ -1,0 +1,54 @@
+CSS(Cascading Style Sheets): the adjectives of web development. Provides 
+    the visual represntation of the document.
+
+    css Rules: basic pattern that defines css. (template below)
+        +template: selector{
+                        property: value;
+                    }
+        +syntax: semicolons need to be after all proper decleration!
+
+    Ways to include css:
+        +inline: defined in html style attribute.(Very Few Use cases)
+        +nested: defined in html tag element <style>
+        +external: write styles in a .css file and include it with a <link> element
+            in the head of the html document.(Standard Practice)
+
+    Properties:
+        +color props:
+            +background: modifies element background, does more than color.
+            +background-color: sets background color.
+            +color: changes text color.
+        +text:
+            +font-size: determines font size of text
+                +size units:
+                    +px = pixel. Doesn't necessarily equal width of eactly 1px
+            +text-align: determine text orientation
+            +font-weight: determineds text thickness depicted with words or numbers.
+                +400 = normal, 700 = bold
+            +text-decoration: adds a line to text
+                +options:
+                    +-line:orientation of line.(under, over, through)
+                    +-color: color of line.
+                    +-style: type of line(dashed, double, wavy)
+                    +-thickness: thickness of line
+            +line-height: determines height of line of text. 
+                (example line-height: 2 would result in double spaced text)
+            +letter-spacing: determines space between characters
+            +font-family: sets font of text. 
+                +can list several fonts in case the first font isn't available on the machine
+                +fonts can be linked to pages with a font file
+
+    
+    css Colors:
+        +named: 140 colors have an english name associated with them.
+        +rgb(red,green,blue): additive color system
+            +has three color channels(in order): red, green, blue
+            +value of each channel can range from 0-255
+        +hexadecimal: still rgb but represents 0-255 using hex numbering
+            +example #ff03ab(red=ff,blue=03,green=ab)
+            + single digit hexvalues are valid if each first number of each channel 
+            is the same as their second. example(#fa4 == #ffaa44)
+
+    Resources:
+        +all css properties: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+        +font family support: https://www.cssfontstack.com/

@@ -1,0 +1,12 @@
+h1{
+    font-size: 70px;
+
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 10px;
+    text-decoration: line-through solid rgba(243, 16, 16, .5);
+}
+
+p{
+    
+}
