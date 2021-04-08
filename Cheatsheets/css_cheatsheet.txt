@@ -112,6 +112,42 @@ CSS(Cascading Style Sheets): the adjectives of web development. Provides
             + single digit hexvalues are valid if each first number of each channel 
             is the same as their second. example(#fa4 == #ffaa44)
 
+    Box Model Properties:
+        +width/height: set's an elements width/height
+        +border: sets a border around an element.
+            +by default border isn't included in the width.
+            +setting box-sizing: border-box; will include border width in the element's width.
+            +takes three values: width, style, color.(order doesn't matter)
+            +example: border: red 2px solid;
+            +border-radius: rounds corners of border.
+        +padding: space between element content and border. top is always first!
+        +margin: space outside of border and between other elements. top is always first!
+            +body has a default margin of 8px;
+        +display: 
+            +types:
+                +none: takes up no space and can't be seen.
+                +inline: elements can be side by side.
+                    +width&height properties are ignored.
+                    +margin&padding seperate elements horizontally but not vertically.
+                +block: elements take up entire line of space.
+                    +respects width, height, margin & padding properties.
+                    +auto fills the line 
+                +inline-block: works like inline but respects width, height, margin & padding properties.
+
+    css Units:
+        +absolute
+            +px = pixel. Doesn't necessarily equal width of eactly 1px.
+        +relative
+            +% = percentage. percentage of a value relative to itself or a parent.
+                +example: width: 50%; //Sets width to 50% of the parent elements width.
+                +example: line-height: 50%; //half the font-size of the element itself.
+            +em = Font size of the parent, in the case of typographical properties like font-size. 
+                +font size of the element itself, in the case of other properties like width.
+                +common issue: em property can compound itself on nested elements.
+                    +p p where p{font-size: 2em}. would result 
+                    in the first p being 2x and the second p being 4x
+            +rem = Font size of the root element.(<HTML>)
+    
 
     Resources:
         +all css properties: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference

@@ -10,3 +10,8 @@ h1{
 p::selection{
     background-color: sienna;
 }
+
+p{
+    border: red solid 2px;
+    padding: 5px;
+}
