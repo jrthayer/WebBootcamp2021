@@ -100,7 +100,21 @@ CSS(Cascading Style Sheets): the adjectives of web development. Provides
             +font-family: sets font of text. 
                 +can list several fonts in case the first font isn't available on the machine
                 +fonts can be linked to pages with a font file
-    
+        +transitions: add animations to your styling
+            +Properties:
+                +time: how long it takes for style to change from A to B.
+                +property-name: which property you want to transition.
+                +timing-function: defines tranistion type. 
+                    +https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function
+                +delay: how long to wait before transition starts.
+        +transform: 
+            +will transform all elements inside element being transformed.
+            +types:
+                +rotate, scale, translateX, translateY
+            +origin: where to tranform the element from. Usually defaults to center of element.
+        +background:
+            +size can only be included immediately after position
+
     css Colors:
         +named: 140 colors have an english name associated with them.
         +rgb(red,green,blue): additive color system
@@ -111,6 +125,14 @@ CSS(Cascading Style Sheets): the adjectives of web development. Provides
             +most commonly used color indicator
             + single digit hexvalues are valid if each first number of each channel 
             is the same as their second. example(#fa4 == #ffaa44)
+        +Opacity & Alpha Cheannel:
+            +aplha(rgba): how transparent a color is.
+                +range 0-1(completely transparent)-(not transparent)
+                    +00-ff on hex value color
+                +only affects the property being defined.
+            +Opacity(attribute): how transparent an element is.
+                +range 0-1(completely transparent)-(not transparent)
+                +affects the entire element applied to.
 
     Box Model Properties:
         +width/height: set's an elements width/height
@@ -131,9 +153,25 @@ CSS(Cascading Style Sheets): the adjectives of web development. Provides
                     +margin&padding seperate elements horizontally but not vertically.
                 +block: elements take up entire line of space.
                     +respects width, height, margin & padding properties.
-                    +auto fills the line 
+                    +auto fills the line
+                    +Warning: margin collapsing!!!!!
+                        +https://cmichel.io/css-margin-top-not-working 
                 +inline-block: works like inline but respects width, height, margin & padding properties.
-
+        +position: sets how an element is positioned in a document.
+            +Types: determines how top, right, bottom, left, z-index properties function. 
+                +static(default value): normal flow of document. Above properties have no effect.
+                +relative: moves relative from default positon using above properties.
+                +absolute: moves relative from closest absolute positioned relative.
+                    +defaults to body, unless a closer parent has defined position:absolute.
+                +fixed: The element is removed from the normal document flow 
+                    +no space is created for the element in the page layout
+                    +It is positioned relative to the initial containing block established by the viewport 
+                        +EXCEPTION: Will be relative to ancestor if it has one of the 
+                        following is set to something other than none: 
+                            +transform
+                            +perspective
+                            +filter 
+    
     css Units:
         +absolute
             +px = pixel. Doesn't necessarily equal width of eactly 1px.
@@ -148,7 +186,18 @@ CSS(Cascading Style Sheets): the adjectives of web development. Provides
                     in the first p being 2x and the second p being 4x
             +rem = Font size of the root element.(<HTML>)
     
+    css whitespace:
+        +there are whitespace characters between html objects not on the same line
+        +this character does take up space and will through off by hand width calculations
+            +<h1></h1><h1></h1> 
+                Is not the same as 
+            +<h1></h1>
+             <h1></h1>
 
     Resources:
         +all css properties: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
         +font family support: https://www.cssfontstack.com/
+        +margin collapsing: 
+            +https://cmichel.io/css-margin-top-not-working
+            +https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
+        +google fonts: https://fonts.google.com/
