@@ -157,6 +157,28 @@ CSS(Cascading Style Sheets): the adjectives of web development. Provides
                     +Warning: margin collapsing!!!!!
                         +https://cmichel.io/css-margin-top-not-working 
                 +inline-block: works like inline but respects width, height, margin & padding properties.
+                +css Flexbox: one-dimensional layout for laying out items in rows or columns.  
+                    +allows space to be distributed dynamically across elements of unknown size
+                    +flex has a main axis and a cross axis
+                        +Properties(placement)(container):
+                            +flex-direction: determines direction of main axis.
+                            +justify-content: how elements are distributed across main axis.
+                            +align-content: how elements are distributed across cross axis with multiple(rows/cols).
+                            +algin-items: how elements are distributed across cross axis.
+                            +align-self(element): determines location on cross axis of singluar elements.
+                            +flex-wrap: how elements react to getting to the end of the axis.
+                        +Properties(size)(elements):
+                            +flex-basis: initial size of main axis dimension of objects.
+                            +flex-grow: This property specifies how much of the remaining 
+                                space in the flex container should be assigned to the item (the flex grow factor).
+                            +flex-shrink: sets the flex shrink factor of a flex item. If the size of all flex items 
+                                is larger than the flex container, items shrink to fit according to flex-shrink.
+                            +flex: combines the three properties above.
+                                +3 arguments = grow | shrink | basis.
+                                +2 arguments = grow | shrink.
+                                +2 arguments = grow | basis.
+                                +1 argument unitless = grow.
+
         +position: sets how an element is positioned in a document.
             +Types: determines how top, right, bottom, left, z-index properties function. 
                 +static(default value): normal flow of document. Above properties have no effect.
@@ -172,6 +194,7 @@ CSS(Cascading Style Sheets): the adjectives of web development. Provides
                             +perspective
                             +filter 
     
+
     css Units:
         +absolute
             +px = pixel. Doesn't necessarily equal width of eactly 1px.
@@ -194,6 +217,9 @@ CSS(Cascading Style Sheets): the adjectives of web development. Provides
             +<h1></h1>
              <h1></h1>
 
+    Responsive Design: Make a singluar website look good on all moniter sizes.
+        +media queries:
+
     Resources:
         +all css properties: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
         +font family support: https://www.cssfontstack.com/
@@ -201,3 +227,4 @@ CSS(Cascading Style Sheets): the adjectives of web development. Provides
             +https://cmichel.io/css-margin-top-not-working
             +https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
         +google fonts: https://fonts.google.com/
+        +flex axis diagram: included in cheatsheet file
