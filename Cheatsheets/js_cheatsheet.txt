@@ -1,0 +1,36 @@
+JavaScript: scripting language used in web development. 
+    Makes dynamic changes to the document.
+
+    Comments: are done with // at the beginning of the line you want to be
+        a comment.
+
+    Primitives:
+        +number: js has only ONE number type.
+            +doesn't matter if the number is whole, floating, negative, or positive
+            +there is a limit of memory a number can take up
+            +js mathmatically follows order of operations(PEMDAS)
+            + x ** y = x to the power of y
+            +NaN = Not a Number(is a valid number VALUE). 
+                +represents a result that is not a number.
+                + examples ---> 0/0 = NaN. 1 + NaN = NaN.
+        +string: 
+        +boolean: true or false.
+        +null 
+        +undefined
+
+    Variables: references a value with a name.
+            +example var Name = value;
+        +Defined with var, let, or const data type.
+            +var is function scoped and let is block scoped.
+                It can be said that a variable declared with var is defined 
+                throughout the program as compared to let.
+            +const works like let but CANNOT change value;
+            +let and const are the newer types, var does not need to be used
+        +variables are not type set! Any variable can be any value. 
+            +This includes things like functions!?!
+        +naming convertions
+            +variable names cannot start with a number. 
+            +camelCase
+            +snake_case
+                
+    

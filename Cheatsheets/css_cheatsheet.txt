@@ -1,5 +1,5 @@
 CSS(Cascading Style Sheets): the adjectives of web development. Provides 
-    the visual represntation of the document.
+    the visual representation of the document.
 
     css Rules: basic pattern that defines css. (template below)
         +template: selector{
@@ -219,6 +219,13 @@ CSS(Cascading Style Sheets): the adjectives of web development. Provides
 
     Responsive Design: Make a singluar website look good on all moniter sizes.
         +media queries:
+        +start with mobile first.
+
+    Bootstrap: "the world's most popular css framework"
+        +main features:
+            +components: pre-made css components like navbar, button, etc.
+            +Grid System: custom responsive layout system created in css.
+
 
     Resources:
         +all css properties: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
