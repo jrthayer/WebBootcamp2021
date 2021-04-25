@@ -13,10 +13,29 @@ JavaScript: scripting language used in web development.
             +NaN = Not a Number(is a valid number VALUE). 
                 +represents a result that is not a number.
                 + examples ---> 0/0 = NaN. 1 + NaN = NaN.
-        +string: 
+        +string:
+            +format: need to be wrapped in " " or ' '.
+            +numbers inside '' are a string not a number.
+                +var x = "22" + "33" ---->> "2233"
+            +to use quotes inside a string use the other ""/''
+                +var quote = 'she said, "hello!"'
+            +strings are indexed. every character in the string has an index.
+                +index starts at 0
+                +var cat = "Felix"; cat[1] ---> "e";
+                +.length returns the number of indexes. .length is a property.
+                +string methods: built in string actions
+                    +format: stringName.methodName()
+                +string template literals: allow strings to have embedded expressions!
+                    +have to use `` as the string quotes
+                    +expression format: ${expression}
+                    +examples:
+                        +`I have ${5+6} cups` --> "I have 11 cups"
         +boolean: true or false.
-        +null 
+        +null:
+            +"Intentional absence of any value"
+            + must be assigned!!!
         +undefined
+            +variables that do not have an assigned value
 
     Variables: references a value with a name.
             +example var Name = value;
@@ -32,5 +51,12 @@ JavaScript: scripting language used in web development.
             +variable names cannot start with a number. 
             +camelCase
             +snake_case
+    
+    Math Object: is a built-in object that has properties and methods for mathematical constants and functions. It’s not a function object.
+        Math works with the Number type. It doesn't work with BigInt.
+
+    Resources:
+        +Math Object: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
+
                 
     
