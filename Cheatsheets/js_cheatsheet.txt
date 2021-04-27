@@ -4,6 +4,12 @@ JavaScript: scripting language used in web development.
     Comments: are done with // at the beginning of the line you want to be
         a comment.
 
+    Linking a js file:
+        +use a <script> html element with a src attribute set to js file.
+            +example: <script src="app.js"></script>
+        +usually place scripts at the end of body so the html elements are  
+            loaded before the script runs!!!!!!
+
     Primitives:
         +number: js has only ONE number type.
             +doesn't matter if the number is whole, floating, negative, or positive
@@ -51,6 +57,50 @@ JavaScript: scripting language used in web development.
             +variable names cannot start with a number. 
             +camelCase
             +snake_case
+
+    Boolean Logic:
+        +comparison operators:
+            + > greater than
+            + < less than
+            + >= greater than OR equal
+            + <= less than OR equal
+                +equality operators
+                    + == double equals(values compared but not type)
+                        + 22 == "22" ---> true
+                    + === triple equals(values and type are compared)
+                        + 22 === "22" ---> false
+                    + != not equal
+                        + 22 != "22" ---> false
+                    + !== not strictly equal
+                        + 22 !== "22" ---> true
+    Truthy and Falsy:
+        +every value is truthy or falsy
+            +all values are truthy except:
+                +false
+                +0
+                +""(empty string)
+                +null
+                +undefined
+                +NaN(Not a Number)
+
+    Logical operations: combine expressions values
+        +&& AND operator: results in true if all expressions are true, false otherwise
+        +|| OR operator: results in true if either expression is true
+        +!  NOT operator: returns the opposite value of an expression
+
+    Conditional statements:
+        +if statement: if the expression in () is true runs code inside { } 
+            +example: 
+                var x = 2;
+                if(x === 2){ console.log("x is the number 2!!!");}; 
+        +else if statement: if the previous if statement is false this if statement
+            +has to be after an if statement
+        +else statement: if all precedding if statements are false run the code inside{}
+            +example:
+                var x = 2;
+                if(x === 1){console.log("x is the number 1!!!");}
+                else{console.log("x is not the number 1!!!");}
+        +conditional statements can be nested inside of conditional statements
     
     Math Object: is a built-in object that has properties and methods for mathematical constants and functions. It’s not a function object.
         Math works with the Number type. It doesn't work with BigInt.
