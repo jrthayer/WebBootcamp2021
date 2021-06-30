@@ -106,7 +106,7 @@ JavaScript: scripting language used in web development.
         Math works with the Number type. It doesn't work with BigInt.
 
     Data Structures: a collection of data.
-        +Arrays: ordered collections of values.
+        +Arrays: ORDERED collections of values.
             +creating an array: let arrayName = [];
             +arrays are not type specific and therefore can have several different 
                 primitive types in the same array. 
@@ -129,6 +129,23 @@ JavaScript: scripting language used in web development.
                 the array because const is making the name constantly set to the address of 
                 the array, not making the array content constant.
             +arrays can be nested
+        +Object Literals: collection of properties that are key-value pairs.
+            +why not just Object?: Object has more meaning than just a data structure in js.
+            +create: const objectName = {firstKey: value1, secondKey: value2 };
+                +using const cause you don't usually point to a different object
+            +accessing data:
+                +all key values are converted to a string(except for symbols). 
+                +object["keyName"]: need to use "" around key name.
+                    +object[] needs an expression so you can use a variable in the []. Useful for dynamic key access.
+                +object.keyName: does not use "".
+            +adding/updating:
+                +updating: object.keyName = new key value;
+                +adding: object.keyName = value; If the property doesn't exist it will be added.   
+                    +can also use [] notation instead
+            +working with arrays:
+            +objects can be nested:
+                + const object = {nestedObject: {key1: value1} };
+            +objects can be stored in arrays and vice versa
 
 
     Resources:
