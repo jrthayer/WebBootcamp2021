@@ -146,6 +146,49 @@ JavaScript: scripting language used in web development.
             +objects can be nested:
                 + const object = {nestedObject: {key1: value1} };
             +objects can be stored in arrays and vice versa
+            +not iterable! Like an array or string.
+                +can iterate over them by:
+                    +using a for...in loop
+                        +get property values as an array using Object class:
+                            +Object.key(object) -> gives array of the keys
+                            +Object.values(object) -> gives array of the values
+                    
+
+    Loops: allows you to repeat the same section of code. 
+        +Types:
+            +for:
+                +syntax: 
+                    for(
+                        [initialExpression];
+                        [condition];
+                        [incrementExpression];
+                    )
+                    +incrementExprssion can be other modifiers like -- or x/2.   
+                +example: 
+                    for(let x = 0; x < 10; x++){
+                            //repeated code here
+                            console.log(x);
+                        }
+                +iterating over an array:
+                    for(let x = 0; x < array.length; x++){
+                        console.log(array[x]);
+                    }
+                +for...of
+                    +easy syntax to go over an array or iterable objects in general
+                    +for(let item of iterableObject)
+                    +not supported by IE
+            +while: used for loops that are variable.
+                +syntax:
+                    while([condition]){
+                        //code
+                        [modify testing value];
+                    }
+                +very easy to have infinite loops since the logic to meet the condition isn't defined in the loop syntax.
+                +break keyword: if runs stops the loop currently running. Not parent loops just current loop.
+        +Infinite Loops: If the loop condition is never false the loop runs until the application crashes or freezes.
+        +nested loops: loops can be nested.
+
+        
 
 
     Resources:
