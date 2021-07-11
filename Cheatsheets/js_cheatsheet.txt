@@ -153,7 +153,6 @@ JavaScript: scripting language used in web development.
                             +Object.key(object) -> gives array of the keys
                             +Object.values(object) -> gives array of the values
                     
-
     Loops: allows you to repeat the same section of code. 
         +Types:
             +for:
@@ -188,8 +187,65 @@ JavaScript: scripting language used in web development.
         +Infinite Loops: If the loop condition is never false the loop runs until the application crashes or freezes.
         +nested loops: loops can be nested.
 
+    Functions: reusable chunks of code that can be ran by using their defined name.
+       +functions are objects behind the scenes. They can be used and passed around like a variable.
+       +function statement: declare function with function and name.
+            +define/syntax:
+                +function funcName(){
+                    //code to be ran
+                }
+            +execute:
+                +funcName(); //runs the function with name funcName
+        +function expression: store/declare function in a variable.
+            +define/syntax:
+                +let variable = function(x,y){
+                    return x+y;
+                }
+            +execute:
+                variable(3,4); => returns 7;
         
+        +arguments: variables defined inside the () that are passed into and used in the function.
+        +return: return value; Ends function and returns the value from the function. 
+        +scope: where a variable is defined and accessable.
+            +function scope: variables defined inside a function can only be used/exist in that function.
+                +local scope is used over global scope for objects with same name. 
+            +block scope: variables defined inside a block(in between { } but not a function) can only be used/exist in that block.
+                +this is not the case with var variables, vars are function scoped.
+            +lexical scope: nested functions can access variables defined in their parent functions, but not their children functions.
+                +stackoverflow explanation: https://stackoverflow.com/questions/1047454/what-is-lexical-scope
+        +Higher Order Functions: functions that make use other functions, either accepting functions as arguments or returning functions.
+        +keyword this: this is a reference to the parent object of the object that this is being called on. 
+            +So inside a method of an object this returns the object containing that method, but outside the method this refers to the parent object of the object which is window. 
 
+    Method: is a function that is a property of an object.
+        +objectName.methodName()
+        +define:
+            let object = {
+                square: function(num){
+                    return num * num;
+                },
+                cube: function(num){
+                    return num ** 3;
+                }  
+            }
+            +shortHand Method:
+                let object = {
+                    square(num){
+                        return num * num;
+                    },
+                    cube(num){
+                        return num ** 3;
+                    }  
+                }
+    
+    Try/Catch: used to handle errors.
+        try{
+            //run this code
+        }
+        catch(e){
+            //e is the error that is being caught
+            //run this code if there was an error
+        }
 
     Resources:
         +Math Object: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
