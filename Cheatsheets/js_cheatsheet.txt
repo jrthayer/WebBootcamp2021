@@ -129,6 +129,30 @@ JavaScript: scripting language used in web development.
                 the array because const is making the name constantly set to the address of 
                 the array, not making the array content constant.
             +arrays can be nested
+            +Callback Methods: array methods that require functions(callback function) to be past in.
+                +All of these do ALOT of stuff behind the scenes, need to KNOW a lot to use it, read documentation. Not a big fan personally!!!
+                +forEach: calls function on each element in the array.
+                    +syntax
+                        array.forEach(function);
+                    +inline:
+                        array.forEach(function(num){
+                            console.log(num);
+                        }); 
+                    +MDN:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+                +map: calls function on each element and returns a new array with changes.
+                    +let array2 = array.map(function);
+                +filter: creates a new array with all elements that return true;
+                    +let passed = array.filter(element => element.score >= 70);
+                +Some/Every: returns true/false after testing all elements 
+                    +every: returns true if all elements return true;(AND)
+                        +syntax let bool = array.every(element => element < 80);
+                    +some: returns true if any element returns true;(OR)
+                +Reduce: Take an array and reduce it to a single value.
+                    +syntax: array.reduce((accumulator, currentValue) => {
+                        return accumulator + currentValue;
+                    });
+                    +does not need to be math, the important thing is the accumulator value is saved and passed to next test.
+                    +mdn: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
         +Object Literals: collection of properties that are key-value pairs.
             +why not just Object?: Object has more meaning than just a data structure in js.
             +create: const objectName = {firstKey: value1, secondKey: value2 };
@@ -202,8 +226,15 @@ JavaScript: scripting language used in web development.
                     return x+y;
                 }
             +execute:
-                variable(3,4); => returns 7;
-        
+                variable(3,4); ========> returns 7;
+            +Arrow Functions: shorthand for function expression. Not supported by IE.
+                +syntax:
+                    +(parameter1, parameter2) => {return parameter1 * parameter2}
+                +implicit returns: can compact even more... Only work if there is one expression in the function.
+                    +(parameter1, parameter2) => parameter1 * parameter2;
+                +keyword this: maintains scope of where it was created. 
+                
+
         +arguments: variables defined inside the () that are passed into and used in the function.
         +return: return value; Ends function and returns the value from the function. 
         +scope: where a variable is defined and accessable.
@@ -214,7 +245,10 @@ JavaScript: scripting language used in web development.
             +lexical scope: nested functions can access variables defined in their parent functions, but not their children functions.
                 +stackoverflow explanation: https://stackoverflow.com/questions/1047454/what-is-lexical-scope
         +Higher Order Functions: functions that make use other functions, either accepting functions as arguments or returning functions.
-        +keyword this: this is a reference to the parent object of the object that this is being called on. 
+        +keyword this: is determined by EXECUTION order not scope. Essentially this is the object that is currently executing.
+            So a object using this will be window since window is executing this, but a method inside an object this will be the object because the object is calling the method.
+            
+            +my original understanding: this is a reference to the parent object of the object that this is being called on. 
             +So inside a method of an object this returns the object containing that method, but outside the method this refers to the parent object of the object which is window. 
 
     Method: is a function that is a property of an object.
@@ -246,6 +280,17 @@ JavaScript: scripting language used in web development.
             //e is the error that is being caught
             //run this code if there was an error
         }
+
+    Time altered functions:
+        +setTimeout: delays a function call to a later timeframe.
+            +syntax:
+                setTimeout(function(){}, timeToDelay(in ms));
+        +setInterval: calls a function every set amount of ms.
+            +syntax:
+                const id = setInterval(function(){}, interval);
+                +returns id of interval being run.
+            +how to stop interval:
+                clearInterval(id);
 
     Resources:
         +Math Object: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
