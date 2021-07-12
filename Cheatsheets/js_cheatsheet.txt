@@ -212,7 +212,10 @@ JavaScript: scripting language used in web development.
         +nested loops: loops can be nested.
 
     Functions: reusable chunks of code that can be ran by using their defined name.
-       +functions are objects behind the scenes. They can be used and passed around like a variable.
+        +functions are objects behind the scenes. They can be used and passed around like a variable.
+       +arguments object: each function has an arguments object that can be accessed like an array.
+            +contains all arguments passed to the function.
+            +not available inside arrow functions
        +function statement: declare function with function and name.
             +define/syntax:
                 +function funcName(){
@@ -233,8 +236,7 @@ JavaScript: scripting language used in web development.
                 +implicit returns: can compact even more... Only work if there is one expression in the function.
                     +(parameter1, parameter2) => parameter1 * parameter2;
                 +keyword this: maintains scope of where it was created. 
-                
-
+    
         +arguments: variables defined inside the () that are passed into and used in the function.
         +return: return value; Ends function and returns the value from the function. 
         +scope: where a variable is defined and accessable.
@@ -249,8 +251,8 @@ JavaScript: scripting language used in web development.
             So a object using this will be window since window is executing this, but a method inside an object this will be the object because the object is calling the method.
             
             +my original understanding: this is a reference to the parent object of the object that this is being called on. 
-            +So inside a method of an object this returns the object containing that method, but outside the method this refers to the parent object of the object which is window. 
-
+            +So inside a method of an object this returns the object containing that method, but outside the method this refers to the parent object of the object which is window.
+         
     Method: is a function that is a property of an object.
         +objectName.methodName()
         +define:
@@ -291,6 +293,47 @@ JavaScript: scripting language used in web development.
                 +returns id of interval being run.
             +how to stop interval:
                 clearInterval(id);
+
+    Newer JS Features:
+        +default params: if a parameter isn't provided set it to a default value.
+            +syntax: function name(a, b = 1){ //b defaults to 1 if not passed in}
+            +order matters!!!
+            +not supported by IE
+        +Spread: spreads an iterable to be expanded in places where zero or more arguments/elements are expected.
+            +syntax: ...Array ----> results in passing the individual elements.
+            +this works on anything you can iterate over: strings, arrays, object literals
+            +very useful for copying arrays or objects
+        +Rest: same syntax as spread but is placed in a functions attribute area when defining a function. 
+            Instead of spreading an iterable it takes all arguments and places them in array.
+            +syntax: function test(first, second, ...rest){}
+        +Destructing: unpacks values from arrays, properties from objects into variables
+            +array syntax: 
+                let array = [1,30,40,5];
+                let [first, second, third] = array;
+                //creates variables: first = 1, second = 30, third = 40
+            +object syntax:
+                let object = {
+                    email: 'ad;fa@gmail.com',
+                    firstName: 'Bob',
+                    lastName: 'Teader'
+                }
+                let {email, firstName, lastName} = object;
+                //creates variables: email = 'ad;fa@gmail.com', firstName = 'Bob'
+                +you can rename variables of object keys with :
+                    +example: 
+                        let {email, firstName: first, lastName: last} = object;
+                        //creates variables: email = 'ad;fa@gmail.com', first = 'Bob'
+                +can use default values:
+                        let {email, firstName: first, lastName: last = 'doe'} = object;
+                        //if lastName isn't defined set variable last = 'doe';
+            +parameter:
+                syntax: function fullName({firstName :first, lastName: last = 'doe'}){
+
+                }
+            +can be used with rest
+                let array = [1,30,40,5];
+                let [first, ...rest] = array;
+                 //creates variables: first = 1, rest = [30,40,5]
 
     Resources:
         +Math Object: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
