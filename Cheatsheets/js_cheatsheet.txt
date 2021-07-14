@@ -335,6 +335,60 @@ JavaScript: scripting language used in web development.
                 let [first, ...rest] = array;
                  //creates variables: first = 1, rest = [30,40,5]
 
+    DOM(Document Object Model): is a javaScript representation of a webpage. A bunch of js Objects that can be manipulated.
+        +Document Object: Every html tag becomes a js object. The top most object(root of the tree) is the document object.
+            +these objects are stored in a tree structure, with children objects(tags inside other tags) branching off from parents.
+            +console.dir(document) --> shows all the attributes that are associated with the document object of the page
+        +Selecting DOM elements: using js to select specific objects from the DOM.
+            +Elements: https://developer.mozilla.org/en-US/docs/Web/API/Element
+            +old selectors:
+                +document.getElementById('idName'): returns element object with idName if it exists, null if it does not.
+                +htmlColletctions: Set of element objects. Looks like an array but is not. Can iterate over them.
+                    +document.getElementsByTag('tag'): returns HTML collection with all 'tags' elements in the document.
+                    +document.getElementsByClassName('class'): returns HTML Collection with all 'classes' elements in the document.
+            +newer selectors: SO MUCH Better!
+                +querySelector('css Selector'): returns the first element that matches the selector, returns null if no matches found.
+                +querySelectorAll('css Selector'): returns all elements that match the selector in a Node List!!!
+        +Manipulating DOM elements:
+            +element.innerText = 'string': only shows “human-readable” elements.
+                +since innerText takes CSS styles into account, reading the value of innerText triggers a reflow to ensure up-to-date computed styles. 
+                (Reflows can be computationally expensive, and thus should be avoided when possible.)
+            +element.textContent = 'string': gets the content of all elements, including <script> and <style> elements. 
+            +element.innerHTML = gets or sets the HTML or XML markup contained within the element;
+            +Attributes:
+                +element.'attributeName': gets value from js. Post computed value.
+                +element.'attributeName' = value: sets value.
+                +getAttribute('name'): gets the text from html. Pre computed value.
+                +setAttribute('name', 'value'): sets attribute value.
+                +difference Between: https://stackoverflow.com/questions/3919291/when-to-use-setattribute-vs-attribute-in-javascript
+                    +So you only need to use setAttribute for non-standard attributes.
+            +Styles: styles in js are camelCase not -, so fontSize not font-size;
+                +element.style."styleName" = the INLINE style values of the document.
+                +can get current cs values elements with window.getComputedStyle(h1).color
+                +better to use classes to change styling
+                +element.classList = list of classes on element, has many methods to manipulate classes.
+                +element.classList.add(): adds classes to element
+                +element.classList.remove(): removes classes from element
+                +element.classList.toggle(): adds class if it exists, removes if class does not.
+            +Traverse Relatives:
+                +element.parentElement = returns parent element.
+                +element.children = returns HTMLCollection of children... ugh! Can be indexed/iterated NOT AN ARRAY!!!
+                +element.previousSibling = give prev adjacent element including whitespace/text nodes.
+                +element.nextSibling = give next adjacent element including whitespace/text nodes.
+                ++element.previousSiblingElement = give prev adjacent element ignoring filler.
+                +element.nextSiblingElement = give next adjacent element ignoring filler.
+            +Creating Element:
+                +document.creatElement('tagName');
+            +Adding Elements:
+                +element.appendChild(newElement); adds newElement to the element. 
+                +element.append(newElement/text); same as above but allows for DomStrings, multiple nodes at the same time, and has no return value.
+                +element.prepend(newElement/text); adds newElement as first child of element
+                +element.insertAdjacentElement(target, newElement); insert newElement adjecent to element before or after. Can also put inside but can just use the above functions. 
+                +element.after(newElement); inserts newElement adjacent after element.
+                +element.before(newElement); inserts newElement adjacent before element.
+            +Removing Elements:
+                +element.removeChild(childElement); remove child of parent element.
+                +element.remove(); remove element calling this method. 
     Resources:
         +Math Object: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
 
