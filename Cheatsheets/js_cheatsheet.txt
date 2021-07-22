@@ -389,8 +389,44 @@ JavaScript: scripting language used in web development.
             +Removing Elements:
                 +element.removeChild(childElement); remove child of parent element.
                 +element.remove(); remove element calling this method. 
+    
+    Events: detecting and responding to user input.
+        +Ways to add events:
+            +html inline events(not generally used): <tag onclick = "function">, <tag ondbclick = "function"> 
+            +event property: element.eventProperty = function;
+                +list of available: https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers
+            +element.addEventListener('eventType', function); //BEST To USE
+                +allows multiple functions to be attached to the same event and allows functions to be removed from events. 
+                +list of eventTypes: https://developer.mozilla.org/en-US/docs/Web/Events#event_index
+        +keyword 'this' and events: inside an eventListener callback 'this' refers to the element with the callback attached.
+        +event object: every function triggered by an event is passed an event object by default. 
+            +this is one of the things that makes js so hard to read without knowing everything in advance!!!
+            +example:
+                document.body.addEventListener('click', function(e){
+                    //this function handler is passed the event object and does not take custom arguments.
+                    //instead you call your function inside the handler function.
+                    console.log(e);
+                })
+            +the values in this element is based on the type of event being triggered. Clicking a keyboard key reutrns a keyboardEvent element.
+        +PreventDefault: inside callback of eventListener event.preventDefualt();
+            +this is called on the event object and prevents the default callback actions from occuring
+        +form events:
+            +submit: called when a form is submited.
+            
+            +forms elements contain an object that holds all their children called elements,
+                +if the elements have names they can be accessed with that name, form.elements."elementName"
+                +not sure why this is brought up during events but it is.
+        +Input events:
+            +change: called when an input value is unfocused(blur?) and different from before.
+            +input: called whenever the input value changes.
+        +Bubbling: events start with deepest child and work back through parents.
+            +so when you click a button inside a div, the button click event will fire and then the parent div click event will fire.
+            +event.stopPropegation(): stops "bubbling"
+        +Delegation:  The process of using event propagation to handle events at a higher level in the DOM than the element on which the event originated
+            +event.target: returns the element that originated the event firing.
+            
     Resources:
         +Math Object: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
-
+        +All Things Events: https://frontend.turing.edu/lessons/module-1/js-event-bubbling-and-delegation.html?ads_cmpid=6451354298&ads_adid=76255849919&ads_matchtype=b&ads_network=g&ads_creative=378056926252&utm_term=&ads_targetid=dsa-19959388920&utm_campaign=&utm_source=adwords&utm_medium=ppc&ttv=2&gclid=CjwKCAjwruSHBhAtEiwA_qCppp8EuCg8IlqSsRf_jOgzx-I13EM358dDLHu-WApPi5F_V6GiJSn6wxoC_YIQAvD_BwE
                 
     
