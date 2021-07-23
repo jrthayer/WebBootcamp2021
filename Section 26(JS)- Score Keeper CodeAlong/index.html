@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping Pong Score</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="https://www.redhat.com/sysadmin/sites/default/files/styles/google_discover/public/2021-04/Ping.jpg?itok=Rq21cNBy" alt="">
+        <div class="scoreCard">
+            <h3>Ping Pong Score Keeper</h3>
+            <h1>0 to 0</h1>
+            <p>Use the buttons below to keep score!</p>
+            <p>Playing To 
+                <select name="" id="maxScore">
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </p>
+            <div id="buttonBar"> 
+                <button>+1 Player One</button>
+                <button>+1 Player Two</button>
+                <button>Reset</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="pingPong.js"></script>
+</body>
+</html>

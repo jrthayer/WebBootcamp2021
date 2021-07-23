@@ -1,0 +1,51 @@
+img{
+    width: 100%;
+}
+button{
+    outline: none;
+    border: none;
+    border-radius: .5rem;
+    color: white;
+}
+.disabled{
+    opacity: .5;
+}
+
+.container{
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+.scoreCard{
+    border: 1px solid black;
+    padding: 1rem;
+    text-align: center;
+}
+    .scoreCard h3{
+        border: 1px solid black;
+        padding: 1rem;
+    }
+    .scoreCard p:nth-of-type(2){
+        font-weight: 700;
+    }
+
+#buttonBar{
+    display: flex;
+    justify-content: center;
+}
+    #buttonBar button{
+        margin: .5rem;
+        padding: 1rem;
+        text-transform: uppercase;
+        min-width: 10rem;
+    }
+
+button:nth-of-type(1){
+    background-color: rgb(95, 133, 95);
+}
+button:nth-of-type(2){
+    background-color: rgb(57, 55, 184);
+}
+button:nth-of-type(3){
+    background-color: rgb(189, 57, 57);
+}
