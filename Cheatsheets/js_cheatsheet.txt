@@ -424,7 +424,55 @@ JavaScript: scripting language used in web development.
             +event.stopPropegation(): stops "bubbling"
         +Delegation:  The process of using event propagation to handle events at a higher level in the DOM than the element on which the event originated
             +event.target: returns the element that originated the event firing.
-            
+
+    Async:
+        +The Call Stack: mechanism that the JS interpreter uses to determine it's place in a script.
+            +last in, first out.
+            +each function that a script reaches is added to the stack, if the function calls another function that function will be added to the stack 
+                and run first before the parent function.
+            +you can test the stack using the sources tab in the chrome inspector
+                +clicking on a function will add a break point stoping the js script when it gets to that point when you refresh the page.
+        +JS is single thread, which means at any given time JS can only run one line of code.
+            +But the browser isn't, so JS hands off tasks to the browser to handle, like timeouts or requests.(These are web APIs)
+                +The browser waits till the callback conditions are meet and then tell JS to run the function.
+        +Callback Hell: having lots of nested callbacks, cluttering code and making the syntax messy.
+            +Common for each request to have a success callback and a failure callback, which can then have nested success/failure and so forth.
+                +This is what causes Callback Hell, a shortcoming of old JS.
+        +Promise: an object representing the eventual completion or failure of an asynchronous operation.
+            +A solution to callback hell,
+            +promise has three states: pending, resolved, rejected.
+            +syntax:
+                +new Promise(function(resolve, reject){
+                    //if resolve is ran, the promise becomes "resolved"
+                    //if reject is ran, the promise becomes "rejected"
+                });
+                +promise.then(function()): function that runs when a promise is resolved.
+                +promise.catch(function()): function that runs when a promise is rejected.
+            +promise chaining: promise.then() can be chained by returning a promise.       
+        +Async Functions: cleaner syntax for promises!
+            +Async:
+                +syntax:
+                    +async function functionName(){}
+                +always returns a promise.
+                +if the function returns a value, the promise will be resolved with that value.
+                +if the function has an error the promise is rejected 
+                +rejection:
+                    +using try/catch will allow you to catch errors
+                    +try{
+                        //run your code here
+                    }   
+                    catch(e){
+                        //e is the error that occured
+                        console.log(e);
+                    }
+            +Await: The await expression causes async function execution to pause until a Promise is settled (that is, fulfilled or rejected), and to resume execution of the async function after fulfillment.
+                +await functionName() ---> where functionName is an async function
+        +Stack Visualization: http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D 
+
+    +Actual Requests!!!!
+        +
+
+
     Resources:
         +Math Object: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
         +All Things Events: https://frontend.turing.edu/lessons/module-1/js-event-bubbling-and-delegation.html?ads_cmpid=6451354298&ads_adid=76255849919&ads_matchtype=b&ads_network=g&ads_creative=378056926252&utm_term=&ads_targetid=dsa-19959388920&utm_campaign=&utm_source=adwords&utm_medium=ppc&ttv=2&gclid=CjwKCAjwruSHBhAtEiwA_qCppp8EuCg8IlqSsRf_jOgzx-I13EM358dDLHu-WApPi5F_V6GiJSn6wxoC_YIQAvD_BwE
