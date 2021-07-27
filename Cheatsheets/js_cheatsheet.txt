@@ -470,8 +470,52 @@ JavaScript: scripting language used in web development.
         +Stack Visualization: http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D 
 
     +Actual Requests!!!!
-        +
+        +AJAX: Asynchronous JavasScript and XML, making requests for the page after the page has already been loaded.
+            +generally refers to JSON not XML but still called AJAX
+        +API: Application Prgramming Interface.
+            +Web API: are interfaces that are http based. Meaning they follow a standard for web interfaces.
+        +JSON: Java Script Object Notation. Syntax is very similiar to js Objects!
+            +differences from js: 
+                +keys need to have "" around each key name.
+                +undefined is not a value in JSON
+            +JSON.parse(string): turns a json string into a JavaScript object.
+            +JSON.stringify(json): turns a js object into a json string.
+        +Postman: third party tool to better visualize JSON info from APIs.
+            +HTTP status code: standardized web codes to inform user of the status of the page.
+                +200s: success
+                +300s: redirects
+                +400s: client errors
+                +500s: server errors
+            +Headers: key value pairs of http requests
+                +content type
+                +Date
+                +custom headers can be created
+                    +
+        +QueryStrings(URL?querey:string): specific key value pairs that can be added to a url that alot of APIs use as an endpoint.
+            +this was seen when we were submitting forms earlier in the course
+        +Requests:
+            +XMLHttpRequest(oldest):
+                +create XMLHttpRequest() object.
+                +.open('GET', url); //method of request and destination 
+                +.send(); //sends request
+                +.onload = function (){} //runs if successful
+                    +.responseText = string of JSON information
+                +.onerror = function(){} //runs if error
+            +Fetch API(newer):
+                +supports promises!
+                +Not IE... Surprise, surprise...
+                +fetch(url): returns promise.
+                    +.json(): returns a promise after all JSON is retrieved, needed because fetch determines if a promise is successful before retrieving all of the JSON.
+            +AXIOS(newest):
+                +built on top of fetch
+                +works on client side or server side.
+                +axios.get(url, {options}): returns promise, with data already in the data attribute. No extra step.
+                    +axios takes an options object to set various attributes that can go with web requests
+                        +like headers
+                        
+        
 
+                
 
     Resources:
         +Math Object: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
