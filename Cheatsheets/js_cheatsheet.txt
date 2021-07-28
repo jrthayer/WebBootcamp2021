@@ -252,6 +252,7 @@ JavaScript: scripting language used in web development.
             
             +my original understanding: this is a reference to the parent object of the object that this is being called on. 
             +So inside a method of an object this returns the object containing that method, but outside the method this refers to the parent object of the object which is window.
+            +
          
     Method: is a function that is a property of an object.
         +objectName.methodName()
@@ -513,9 +514,80 @@ JavaScript: scripting language used in web development.
                     +axios takes an options object to set various attributes that can go with web requests
                         +like headers
                         
-        
+    +JS Classes/Object Oriented Programming(OOP):
+        +Prototypes: Is a template object (set of methods? library of functions?   
+            +can add properties using String.prototype.newFunction = function(){alert("new Function")};
+            +shouldn't mess with prototypes since they are a standard other people know/follow so changing it isn't a great idea. but you can.
+            +the __proto__ found on elements is a reference to the .protoype template
+        +Factory Functions(oldest): use a function to make you an object.
+            +syntax:
+                function makeObject(x, y){
+                    const object = {};
+                    object.x = x;
+                    object.y = y;
+                    object.times = function(){
+                        const{x,y} = this; //this is an example of js destructing assignment!
+                        return `${x*y}`; 
+                    };
 
-                
+                    return object;
+                }
+            +This works but is flawed and not commmonly used.
+            +The flaw is that every time an object is made a unique copy of each of its function is made.
+        +Constructor Functions(newer):
+            +syntax:
+                function object(x,  y){
+                    this.x = x;
+                    this.y = y;
+                }
+
+                object.prototype.times = function(){
+                    const{x,y} = this; //this is an example of js destructing assignment!
+                    return `${x*y}`; 
+                }
+
+                let oj = new object(55, 25);
+                oj.times();
+
+            +NOTE: do not use arrow functions(() => {}) on these because they handle this differently. 
+            +new keyword:
+                +steps in order:
+                    +creates a blank, plain JS object.
+                    +Links(sets the constructor of) this object to another object;
+                    +Passes the newly created object from step 1 as the 'this' context;
+                    +Returns 'this' if the function doesn't return it's own object;
+            +This is flawed since the object variables are defined seperately from the prototype methods.
+        +Classes(newest): 
+            +syntax:
+                +class Object{
+                    constructor(x,y){
+                        this.x = x;
+                        this.classVariableName = y;
+                    }
+                    times(){
+                        const{x,y} = this; //this is an example of js destructing assignment!
+                        return `${x*y}`; 
+                    }
+                    timesSquared(){
+                        return this.times() * this.times();
+                    }
+                }
+                let oj = new Object(44,22);
+            +Notes:
+                +syntax format: 
+                    +class names are uppercase.
+                    +class variables are generally the same name as the constructor arguments, don't have to be.
+                +constructor(): function called automatically when a class object is created. 
+                +must have constructor
+                +functions defined in classes(like the times function above) are added to the __prototype__ automagically.
+                +keyword 'this' refers to the specific INSTANCE of the class object since new is used. 
+                +Advanced Features:
+                    +extends: create a class that is a child of another class.
+                        +by default uses the parents constructor if child has no constructor.
+                        +mdn: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends
+                    +super: is used to access and call functions on an object's parent.
+                    
+
 
     Resources:
         +Math Object: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
