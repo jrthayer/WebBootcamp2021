@@ -9,13 +9,22 @@ Backend: Server side development.
             +gitBash: bash shell for windows.
                 +src: https://git-scm.com/downloads
                 +includes: Bash and Git support.
-    
-    +Bash Commands:
-        +ls: show files and directories in current dir.
-        +pwd: displays current directory
-        +cd: changes directory.
-        
+        +Bash Commands:
+            +ls: show files and directories in current dir.
+            +pwd: displays current directory
+            +cd: changes directory.
+            +mkdir: makes directory(also known as a folder).
+            +touch: creates files.
+            +rm: removes files.
+            +rmdir: removes directory.
+            +<command name> --help:gives information on command(like flags). 
+            +<command name> -flag: flags are arguments for shell commands.
+        +Relative vs Absolute Paths:
+            +Relative: path relative to current directory.
+            +Absolute: / before path since / is the root directory.
+                +path is can be done anywhere since it is a strict path starting at root dir.
         +Notes:
-            + ~ === home directory.
+                + ~ === home directory.
+                + / === root directory.
 
         
