@@ -1,0 +1,21 @@
+Backend: Server side development.
+
+    Command Line/Terminal:
+        +Terminal: A text-based interface to your computer.
+        +Shell: Software running the text-based interface. (unix is the os kinda)
+            +Bash: popular shell used on mac
+            +zShell(zsh): newer shell on mac
+            +windows default shell runs MS Dos instead of Unix.
+            +gitBash: bash shell for windows.
+                +src: https://git-scm.com/downloads
+                +includes: Bash and Git support.
+    
+    +Bash Commands:
+        +ls: show files and directories in current dir.
+        +pwd: displays current directory
+        +cd: changes directory.
+        
+        +Notes:
+            + ~ === home directory.
+
+        

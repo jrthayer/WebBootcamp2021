@@ -470,7 +470,7 @@ JavaScript: scripting language used in web development.
                 +await functionName() ---> where functionName is an async function
         +Stack Visualization: http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D 
 
-    +Actual Requests!!!!
+    Actual Requests!!!!
         +AJAX: Asynchronous JavasScript and XML, making requests for the page after the page has already been loaded.
             +generally refers to JSON not XML but still called AJAX
         +API: Application Prgramming Interface.
@@ -514,7 +514,7 @@ JavaScript: scripting language used in web development.
                     +axios takes an options object to set various attributes that can go with web requests
                         +like headers
                         
-    +JS Classes/Object Oriented Programming(OOP):
+    JS Classes/Object Oriented Programming(OOP):
         +Prototypes: Is a template object (set of methods? library of functions?   
             +can add properties using String.prototype.newFunction = function(){alert("new Function")};
             +shouldn't mess with prototypes since they are a standard other people know/follow so changing it isn't a great idea. but you can.
@@ -586,7 +586,7 @@ JavaScript: scripting language used in web development.
                         +by default uses the parents constructor if child has no constructor.
                         +mdn: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends
                     +super: is used to access and call functions on an object's parent.
-                    
+
 
 
     Resources:
