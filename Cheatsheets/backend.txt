@@ -26,5 +26,25 @@ Backend: Server side development.
         +Notes:
                 + ~ === home directory.
                 + / === root directory.
+    
+    NodeJS: a JavaScript runtime. An implementation of JS that can be run outside the browser.
+        +What people use it for:
+            +Web Servers
+            +Command Line Tools
+            +Native Apps(VSCode is a Node App)
+                +Using Electron
+            +Video Games
+        +Installation: go to their website...
+        +Node REPL: sandbox that is running/interpreting js.
+            +doesn't have any of the browser stuff like the window DOM object.
+            +accessed by running 'node' in the bash.
+            +exit with .exit
+        +Running a js file: $node filename.js
+        +getting arguments:
+            +syntax: $node file.js arg1 arg2 arg3
+                    //inside file.js below
+                    console.log(process.argv.slice(2));
+
+
 
         
