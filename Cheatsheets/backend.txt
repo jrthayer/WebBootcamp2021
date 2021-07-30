@@ -44,7 +44,35 @@ Backend: Server side development.
             +syntax: $node file.js arg1 arg2 arg3
                     //inside file.js below
                     console.log(process.argv.slice(2));
-
-
-
-        
+        +Module/Files:
+            +require:
+                +add file:
+                    //this will make a js file require another file
+                    let object = require("./math");
+                +adding directory:
+                    +need to have an index.js file inside the directory you want to add
+                        +the index file will require the js files that you want included and add it to export.
+                    +let object = require("./directory");
+                    +node will then look for index.js automatically and add the exported info.
+            +making a module:
+                +create a js file and add necessary parts to module.exports.whateverYouAreAdding.
+                +exports is a shortcut for module.exports as long as exports hasn't been defined.
+                    +doesn't work for object, need to use module.exports = {}
+            +NPM(Node Package Manager): standardized library of packages and a command line tool to install them.
+                +install:
+                    +syntax:
+                        +npm install packageName
+                            +package names can be found in the NPM Registry
+                            +install can be subsitutued with i
+                    +local vs global:
+                        +by default install will install the module locally, meaning only files inside that directory can use them.
+                        +to install globally include -g, this adds it to the node module library folder instead of the local directory.
+                            +global is generally only used for command line modules
+                    +package.json: contains meta-data about the module.
+                        +npm init 
+                            +will prompt you to fill out the info needed for the package.json
+                        +when you install module and have a package.json it's name and version will be added automatically to the dependacy section.
+                            +this is useful so that you can keep track of what modules and versions you need for your project.
+                        +found in the root directory of the project
+                        +npm install 
+                            +will look into the package.json and install all modules needed.
