@@ -76,3 +76,24 @@ Backend: Server side development.
                         +found in the root directory of the project
                         +npm install 
                             +will look into the package.json and install all modules needed.
+
+    Express: a web developement framework for Node.js. Creating actual web servers!
+        +Starts up a server.
+        +Parse incoming requests.
+        +Match those request to routes.
+        +Craft our http response and related content.
+        +Library vs Framework:
+            +both are sets of code that add functionality to an existing code base.
+            +Library is generally a set of functions/methods that can be used where we need them.
+            +Framework is providing functionality and structure that must be followed to use it.
+        +Express default parameters:
+            +1st parameter: request information, that express has turned into an object
+                +query strings are found in req.query
+                +req.params == .get('/r/:variable/:variable2;
+                    +app.get('/r/:variable/:variable2', (req,res) => {
+                        let { variable: test, variable2: id } = req.params;
+                        res.send(`This is subreddit ${test} with ${id}`);
+                    }
+            +2nd parameter: response information, that express has turned into an object
+        +Routing: taking a request with a path and returning a response based on that path
+        +nodeMon: node module that refreshs your server when you make changes to the files.
