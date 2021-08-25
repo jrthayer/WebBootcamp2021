@@ -95,5 +95,10 @@ Backend: Server side development.
                         res.send(`This is subreddit ${test} with ${id}`);
                     }
             +2nd parameter: response information, that express has turned into an object
+            +.set('view engine', 'ejs'); sets views engine to ejs, which determines how express serves the views files.
+            +.set('views', )
+            +views: folder express looks for default that has html templates
+            +
         +Routing: taking a request with a path and returning a response based on that path
         +nodeMon: node module that refreshs your server when you make changes to the files.
+        +EJS: Embedded JavaScript is a module for express
