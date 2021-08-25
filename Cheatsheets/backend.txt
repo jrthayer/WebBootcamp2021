@@ -63,7 +63,7 @@ Backend: Server side development.
                     +syntax:
                         +npm install packageName
                             +package names can be found in the NPM Registry
-                            +install can be subsitutued with i
+                            +install can be substituted with i
                     +local vs global:
                         +by default install will install the module locally, meaning only files inside that directory can use them.
                         +to install globally include -g, this adds it to the node module library folder instead of the local directory.
@@ -77,7 +77,7 @@ Backend: Server side development.
                         +npm install 
                             +will look into the package.json and install all modules needed.
 
-    Express: a web developement framework for Node.js. Creating actual web servers!
+    Express: a web development framework for Node.js. Creating actual web servers!
         +Starts up a server.
         +Parse incoming requests.
         +Match those request to routes.
@@ -100,5 +100,21 @@ Backend: Server side development.
             +views: folder express looks for default that has html templates
             +
         +Routing: taking a request with a path and returning a response based on that path
-        +nodeMon: node module that refreshs your server when you make changes to the files.
+        +nodeMon: node module that refreshes your server when you make changes to the files.
         +EJS: Embedded JavaScript is a module for express
+    
+    CRUD: Create, Read, Update, Delete
+
+    RESTful Routing:
+        +REST is a standard, RESTful is an application that follows REST
+        +This is standard not enforced rules.
+            +Get request: retrieves information.
+                +Retrieves information
+                +Data is sent via query string
+                +Information is plainly visible in URL
+                +Limit on amount of data sent
+            +Post request: 
+                +used to post data to server
+                +used to write/create/update
+                +data is sent via request body
+                +can send any sort of data(JSON!)
