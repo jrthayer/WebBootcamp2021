@@ -118,3 +118,61 @@ Backend: Server side development.
                 +used to write/create/update
                 +data is sent via request body
                 +can send any sort of data(JSON!)
+    
+    Database:
+        +Why use a database?
+            +data persistance
+            +can handle alot of data
+                +store it efficiently 
+                +manipulate easier
+                    +insertion
+                    +querying 
+                    +updating
+            +can scale well
+        +Types:
+            +SQL: structured query language.
+                +Relational databases that conform to SQL standards.
+                +Consists of tables of data with IDs that relate to each other based on those IDs.
+                    +generally using tables of IDs, primary and foreign keys.
+                +examples:
+                    +MySQL, Postgres, SQLite, Oracle, Microsoft SQL Server
+            +no-SQL: not SQL...
+                +Everything that isn't SQL...
+                +examples:
+                    +MongoDB, Couch DB, Neo4j, Cassandra, Redis
+                +MongoDB
+                    +JavaScript based
+                    +Commonly used with Node & Express(MEAN & MERN stacks)
+                    +Very strong community of developers
+                    +BSON(Binary JSON): data type mongo stores data in.
+                        +more compact than json
+                        +more data Types
+                        +
+                    +Collection: container for similar data.
+                    +Document: a single entry of a collection.
+                    +ids: are generate for each entity by default by mongoDB, if you do not define it.
+                    +shell commands:
+                        +use DatabaseName= switch to db, create DB if it doesn't exist
+                        +show collections/dbs= prints out all collections or dbs
+                        +db.collectionName= access collection
+                        +CRUD: Create, Read, Update, Delete
+                            +inserts(Crud): add to a db collection(if collection doesn't exist it will be made)
+                                +db.collectionName.insertOne({}) = inserts one object into collection
+                                +db.collectionName.insertMany({}) = inserts array of objects.
+                                +db.collectionName.insert() = inserts one object or array of objects.
+                                    +nested properties = {'parentProperty.property': value} //NEEDS to be in ''
+                            +find/query(cRud): look for specific entries,
+                                +db.collection.find() = returns all documents in collection, this returns a cursor(which is kinda like a pointer).
+                                +.find({breed: 'corgi'}) = returns all documents in collection that have a breed field set to 'corgi'(caseSensitive)
+                                +.findOne({query object}) = returns document itself.
+                            +updating(crUd): most difficult process, since you have to find and then alter a document.
+                                +db.collection.updateOne({query}, {action}) = update first document that matches
+                                    +example: .updateOne({name: 'Charlie'}, {$set: {age: '3'}})
+                                    +if the set value doesn't exist it will instead be added 
+                                +db.collection.updateMany() = update all documents that match
+                                +db.collection.replaceOne() = replaces all document info except for the id
+                            +delete(cruD): remove document from collection
+                                +db.collection.deleteOne({query}) = removes the first document that matches query
+                                +db.collection.deleteMany({query}) = removes all documents that match query, if query is an empty object it deletes EVERY document in the collection
+                        +db operators: https://docs.mongodb.com/manual/reference/operator/
+                            +
