@@ -175,4 +175,35 @@ Backend: Server side development.
                                 +db.collection.deleteOne({query}) = removes the first document that matches query
                                 +db.collection.deleteMany({query}) = removes all documents that match query, if query is an empty object it deletes EVERY document in the collection
                         +db operators: https://docs.mongodb.com/manual/reference/operator/
-                            +
+                +Mongoose: ODM(Object Document/Data Mapper). Connects nodeJS to mongo, and then adds features that makes working with mongo better.
+                    +create Model w/ schema > create new Model({parameters}) > individual.save()
+                    +models: help structure mongo documents
+                        +schema: each schema maps to a mongoDB collection and defines the shape of the documents within that collection.
+                            +model structure.
+                            +anything not defined in schema is ignored.
+                            +SchemaType Options = schema properties in documentation
+                                +runValidators = true > schema validation applies(only does this on creation by default)
+                        +let Movie = mongoose.model('Movie', movieSchema): creates a class, string should be uppercase and singular
+                            +let bigFatLiar = new Movie({movie parameters}) -> creates a movie object based on the class defined above;
+                            +bigFatLiar.save() -> adds it to the database
+                    +then-able: mongoose uses .then on some of their methods, these are not promises!!!
+                    +CRUD:
+                        +insert(Crud):
+                            +modelObject.save() -> adds object to database
+                            +model.insertMany([]) -> adds set of objects to database
+                        +find(cRud):
+                            +model.find({query}).then(data => console.log(data)) -> prints out all data the matches query in model
+                            +model.findById(id).then() -> returns document with id
+                        +update(crUd):
+                            +model.updateOne({query}, {updated value}).then(res => console.log(res)) -> prints out stats about update, not updated document
+                            +model.updateMany({query}, {updated value}).then() -> updates all documents that match query
+                            +model.findOneAndUpdate({query}, {update value}).then() -> updates one document and returns old document
+                            +model.
+                        +delete(cruD):
+                            +model.deleteOne({query}) -> deletes all documents that match query and returns number deleted
+                    +instance Methods: methods can be attached to individual model instances
+                        + example: schema.methods.methodName = function(){//do something here}
+                        + should use function(){} instead of () => because arrow function this is not the specific instance of the schema
+                    +static methods: methods can be attached to models
+                        +example: schema.statics.methodName
+                    +virtuals: creates an attribute that isn't directly saved in database. Like fullName = {$firstName} + {$lastName}
